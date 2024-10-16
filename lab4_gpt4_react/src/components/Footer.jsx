@@ -1,7 +1,7 @@
 import footerData from "../mockData/footerData"; // Импорт данных о футере
 
 // Компонент для отображения заголовка футера
-const FooterHeader = ({ text, button_title }) => (
+export const FooterHeader = ({ text, button_title }) => (
   <div className="footer-header">
     <h1 className="footer-text">{text}</h1>
     <div className="footer-btn">
@@ -11,7 +11,7 @@ const FooterHeader = ({ text, button_title }) => (
 );
 
 // Компонент для отображения адреса футера
-const FooterAddress = ({ src, title }) => (
+export const FooterAddress = ({ src, title }) => (
   <div className="footer-details">
     <div className="footer_address">
       <img src={src} alt="footer address" />
@@ -21,7 +21,7 @@ const FooterAddress = ({ src, title }) => (
 );
 
 // Компонент для отображения ссылок футера
-const FooterLinks = ({ title_link, links }) => {
+export const FooterLinks = ({ title_link, links }) => {
   return (
     <div className="footer-links">
       <div className="links">
@@ -41,7 +41,7 @@ const FooterLinks = ({ title_link, links }) => {
 };
 
 // Компонент для отображения средней информации футера
-const FooterMiddleData = ({ title, lines }) => (
+export const FooterMiddleData = ({ title, lines }) => (
   <div className="middle__data">
     <p className="title">{title}</p>
     <div className="lines">
@@ -55,7 +55,7 @@ const FooterMiddleData = ({ title, lines }) => (
 );
 
 // Компонент для отображения конца футера
-const FooterEnd = ({ text }) => (
+export const FooterEnd = ({ text }) => (
   <div className="footer-end">
     <p className="end-text">{text}</p>
   </div>
