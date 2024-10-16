@@ -1,84 +1,69 @@
 import footerData from "../mockData/footerData"; // Импорт данных о футере
 
-// Компонент для отображения заголовка футера
-export const FooterHeader = ({ text, button_title }) => (
-  <div className="footer-header">
-    <h1 className="footer-text">{text}</h1>
-    <div className="footer-btn">
-      <button className="footer-button">{button_title}</button>
-    </div>
-  </div>
-);
-
-// Компонент для отображения адреса футера
-export const FooterAddress = ({ src, title }) => (
-  <div className="footer-details">
-    <div className="footer_address">
-      <img src={src} alt="footer address" />
-    </div>
-    <p className="address-text">{title}</p>
-  </div>
-);
-
-// Компонент для отображения ссылок футера
-export const FooterLinks = ({ title_link, links }) => {
-  return (
-    <div className="footer-links">
-      <div className="links">
-        <p className="links-title">{title_link}</p>
-        <div className="links-text">
-          {Array.isArray(links.title) ? (
-            links.title.map((line, index) => (
-              <a key={index} href={links.href}>{line}</a>
-            ))
-          ) : (
-            <a href={links.href}>{links.title}</a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Компонент для отображения средней информации футера
-export const FooterMiddleData = ({ title, lines }) => (
-  <div className="middle__data">
-    <p className="title">{title}</p>
-    <div className="lines">
-      {Array.isArray(lines) ? (
-        lines.map((line, index) => <p key={index}>{line}</p>)
-      ) : (
-        <p>{lines}</p>
-      )}
-    </div>
-  </div>
-);
-
-// Компонент для отображения конца футера
-export const FooterEnd = ({ text }) => (
-  <div className="footer-end">
-    <p className="end-text">{text}</p>
-  </div>
-);
-
 // Основной компонент футера
 const Footer = () => {
-  const { footerHeader, address, linksData, middleData, endData } = footerData;
+  const {  
+    header,
+    button,
+    img,
+    addres,
+    title,
+    links,
+    company,
+    contacts,
+    end} = footerData;
 
   return (
-    <footer>
-      <FooterHeader {...footerHeader} />
-      <div className="footer-details">
-        <FooterAddress {...address} />
-        <div className="footer-links">
-          <FooterLinks {...linksData} />
-          {middleData.map((item, index) => (
-            <FooterMiddleData key={index} {...item} />
-          ))}
+      <>
+      <footer>
+        <div class="footer-header">
+          <h1 class="footer-text">{header.num1}<br/>{header.num2}</h1>
+          <div class="footer-btn">
+            <button class="footer-button">{button}</button>
+          </div>
         </div>
-      </div>
-      <FooterEnd {...endData} />
-    </footer>
+        <div class="footer-details">
+          <div class="footer_address">
+            <img src="${img}"/>
+            <p class="address-text">
+              ${addres.num1}<br/>{addres.num2}<br/>{addres.num3}
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="links">
+              <p class="links-title">{title.num1}</p>
+              <div class="links-text">
+                <a>{links.num1}</a>
+                <a>{links.num2}</a>
+                <a>{links.num3}</a>
+                <a>{links.num4}</a>
+              </div>
+            </div>
+            <div class="footer_companies">
+              <p class="companies-title">{title.num2}</p>
+              <div class="companies-text">
+                <a>{company.num1}</a>
+                <a>{company.num2}</a>
+                <a>{company.num3}</a>
+              </div>
+            </div>
+            <div class="footer_contacts">
+              <p class="contacts-title">{title.num3}</p>
+              <div class="contacts-text">
+                <p>{contacts.num1}<br/>{contacts.num12}</p>
+                <p>{contacts.num2}</p>
+                <p>{contacts.num3}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-end">
+          <p class="end-text">
+            {end}
+            </p>
+        </div> 
+      </footer>
+      </>
   );
 };
 

@@ -25,6 +25,8 @@ const Many_newsData = {
         src:  "./assets/img/news5.svg",
     },
 
+    alt:"bugaga",
+
     data:"Сент 26, 2021",
     text:"GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
     read:{
