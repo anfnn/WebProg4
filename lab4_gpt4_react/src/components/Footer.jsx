@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div class="footer-details">
           <div class="footer_address">
-            <img src="${img}"/>
+            <img src={img}/>
             <p class="address-text">
               ${addres.num1}<br/>{addres.num2}<br/>{addres.num3}
             </p>

@@ -1,28 +1,34 @@
+import img1 from "../assets/img/news1.svg";
+import img2 from "../assets/img/news2.svg";
+import img3 from "../assets/img/news3.svg";
+import img4 from "../assets/img/news4.svg";
+import img5 from "../assets/img/news5.svg";
+
 const Many_newsData = {
 
     img1:
     {
-        src:  "./assets/img/news1.svg",
+        src:  img1,
     },
 
     img2:
     {
-        src:  "./assets/img/news2.svg",
+        src:  img2,
     },
 
     img3:
     {
-        src:  "./assets/img/news3.svg",
+        src: img3,
     },
 
     img4:
     {
-        src:  "./assets/img/news4.svg",
+        src:  img4,
     },
 
     img5:
     {
-        src:  "./assets/img/news5.svg",
+        src: img5,
     },
 
     alt:"bugaga",

@@ -1,3 +1,4 @@
+import footer from "../assets/img/GPT-3.svg";
 const footerData   = {
 
     header:{
@@ -7,7 +8,7 @@ const footerData   = {
 
     button:"Запросить ранний доступ",
 
-    img:"assets/img/GPT-3.svg",
+    img: footer,
     
     addres:{
         num1:"ул. Профессора Поздеева, 13, к.Г,",

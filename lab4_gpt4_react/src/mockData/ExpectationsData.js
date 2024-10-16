@@ -1,9 +1,10 @@
+import FutureImage from "../assets/img/FutureImage.svg";
 
 const ExpectationsData = {
 
     img:
     {
-        src:  "../assets/img/FutureImage.svg",
+        src:  FutureImage,
         alt:  "woman",
     },
 
